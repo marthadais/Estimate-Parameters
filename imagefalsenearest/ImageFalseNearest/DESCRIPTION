@@ -1,0 +1,11 @@
+Package: ImageFalseNearest
+Title: Analysis of false nearest neighbors for images
+Date: 2016-05-13
+Version: 0.1-01
+Authors: Martha D. Ferreira; Rodrigo Fernandes de Mello
+Depends: R (>= 2.2.0), deSolve
+Description: Routines for the analysis of images using a modified false nearest neighbors.
+Maintainer: Rodrigo Fernandes de Mello <mello@icmc.usp.br>
+License: GPL-3
+Date/Publication: 2016-08-30
+NeedsCompilation: yes

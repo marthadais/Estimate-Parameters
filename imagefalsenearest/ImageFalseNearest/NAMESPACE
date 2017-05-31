@@ -1,0 +1,5 @@
+export(image.false.nearest)
+export(plot.false.nearest)
+export(embedd.image)
+export(assess.number.of.kernels)
+useDynLib(ImageFalseNearest)

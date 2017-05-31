@@ -1,0 +1,22 @@
+# Net topology
+net: "example_topology.prototxt"
+# Test batch
+test_iter: 100
+# Testing after X iterations
+test_interval: 500
+# SGD parameters
+type: "SGD"
+base_lr: 0.001
+momentum: 0.9
+weight_decay: 0.004
+# Learning rate upadeting
+lr_policy: "fixed"
+# Display
+display: 100
+# The maximum number of iterations
+max_iter: 10000
+# snapshot: save intermediate models
+snapshot: 1000
+snapshot_prefix: "models/cmu_example_train"
+# solver mode: CPU or GPU
+solver_mode: GPU

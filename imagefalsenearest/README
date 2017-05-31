@@ -1,0 +1,59 @@
+Copyright 2016 Martha Dais Ferreira, Rodrigo Fernandes de Mello
+
+This file is part of ImageFalseNearest.
+
+ImageFalseNearest is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+ImageFalseNearest is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with ImageFalseNearest.  If not, see <http://www.gnu.org/licenses/>.
+
+See the file "COPYING" for the text of the license.
+
+Contact: 
+	Martha D. Ferreira: daismf@icmc.usp.br
+	Rodrigo Fernandes de Mello: mello@icmc.usp.br
+
+-----------------------------------------------------------------------
+README for ImageFalseNearest
+
+	How install package:
+		sudo R CMD build ImageFalseNearest
+		sudo R CMD INSTALL ImageFalseNearest_0.1-01.tar.gz
+
+-----------------------------------------------------------------------		
+Apply the modified False Nearest Neighbors for all possible embedding mask sizes to estimate the most adequate parameters:
+	
+	Usage: image.false.nearest(image.matrix, mask.nrows, mask.ncols, end.T, rt, nn, plot.opt)
+
+	image.matrix  = image to be evaluated
+	mask.nrows    = maximum number of rows to evaluate the embedding dimension
+        mask.ncols    = maximum number of colunms to evaluate the embedding dimension
+	end.T	      = time lag between neighbors (default = 1)
+	rt	      = radius for the neighborhood (default = 10)
+	nn	      = number of nearby neighbors to be considered (default = 1)
+	plot.opt      = option to plot the results (default = TRUE) 
+
+-----------------------------------------------------------------------		
+Apply the modified False Nearest Neighbors for all possible codomain obtained from linear transformation of CNN
+	
+	Usage: assess.number.of.kernels(image.matrix, mask.nrows, mask.ncols, end.T, nkernels, rt, nn, plot.opt)
+
+	image.matrix  = image to be evaluated
+	mask.nrows    = fixed number of rows to compute the embedding
+        mask.ncols    = fixed number of colunms to compute the embedding
+	end.T	      = time lag between neighbors (default = 1)
+	nkernels      = possible numbers of convolutional units to be evaluated (default = 1:5)
+	rt	      = radius for the neighborhood (default = 10)
+	nn	      = number of nearby neighbors to be considered (default = 1)
+	plot.opt      = option to plot the results (default = TRUE) 
+
+
+
