@@ -168,7 +168,7 @@ mask_evaluation <- function(dataset, listfile, maxRow=0, maxCol=0, k=5, threshol
 		files = Files[[1]][ids]
 		
 		#Preparing variables
-		meanResults = matrix(0, nrow=maxRow, ncol=maxCol)
+		sumResults = matrix(0, nrow=maxRow, ncol=maxCol)
 		histogramRowAll = matrix(0,maxRow,maxCol)
 		histogramColAll = matrix(0,maxRow,maxCol)
 		histogramFull = matrix(0,maxRow,maxCol)
@@ -213,7 +213,7 @@ mask_evaluation <- function(dataset, listfile, maxRow=0, maxCol=0, k=5, threshol
 			#write.table(fractionMap,nameFile,row.names=F,col.names=F)
 			
 			#Summing results
-			meanResults = meanResults + fractionMap
+			sumResults = sumResults + fractionMap
 			
 			#Computing histogram for each image considering the current color
 			histogramRow = matrix(0,maxRow,maxCol)
@@ -233,7 +233,7 @@ mask_evaluation <- function(dataset, listfile, maxRow=0, maxCol=0, k=5, threshol
 			histogramFull = histogramRowAll + histogramColAll
 			
 			#Saving results
-			meanResults = meanResults/i
+			meanResults = sumResults/i
 			write.table(meanResults,paste(folder,"outputMeanResults.dat",sep=""),row.names=F,col.names=F)
 			write.table(histogramRowAll,paste(folder,"outputRowHistogram.dat",sep=""),row.names=F,col.names=F)
 			write.table(histogramColAll,paste(folder,"outputColHistogram.dat",sep=""),row.names=F,col.names=F)
@@ -250,10 +250,12 @@ mask_evaluation <- function(dataset, listfile, maxRow=0, maxCol=0, k=5, threshol
 			i=i+1
 			
 		}
-		
-		#Average FNN results considering the color under analysis
-		normMR = meanResults/max(meanResults)
-		normFH = histogramFull/max(histogramFull)
+	
+		#Average FNN results considering the color under analysis 
+                if(max(meanResults) != 0) 
+                        normMR = meanResults/max(meanResults) 
+                if(max(histogramFull) != 0) 
+                        normFH = histogramFull/max(histogramFull) 	
 		
 		#Summing results
 		mean_normMR = mean_normMR + normMR

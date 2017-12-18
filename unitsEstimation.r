@@ -101,8 +101,6 @@ NK_evaluation <- function(dataset, listfile, maskRow, maskCol, k=5, threshold=1e
 	#Preparing variables
 	result_color = list()
 	result_all = list()
-	mean_normMR = rep(0, nKernels)
-	mean_normFH = rep(0, nKernels)
 	
 	#randomize examples
 	ids = sample(length(Files[[1]]))
@@ -111,6 +109,9 @@ NK_evaluation <- function(dataset, listfile, maskRow, maskCol, k=5, threshold=1e
 	#Computing for possible numbers of mask sizes
 	for(currMask in 1:length(maskRow)){
 		
+		mean_normMR = rep(0, nKernels)
+		mean_normFH = rep(0, nKernels)
+	
 		#Computing for three color channels
 		for(color in 1:channels){
 			#1-red 2-green 3-blue
@@ -129,7 +130,7 @@ NK_evaluation <- function(dataset, listfile, maskRow, maskCol, k=5, threshold=1e
 			system(paste("mkdir ",folder,sep=""))
 			
 			#Preparing variables
-			Resultskernels = rep(0, nKernels)
+			sumResultskernels = rep(0, nKernels)
 			histogramAll = rep(0, nKernels)
 			histogramAll_before = histogramAll
 
@@ -166,10 +167,10 @@ NK_evaluation <- function(dataset, listfile, maskRow, maskCol, k=5, threshold=1e
 				#write.table(fractionMap,nameFile,row.names=F,col.names=F)
 				
 				#Summing results
-				Resultskernels = Resultskernels + fractionMap
+				sumResultskernels = sumResultskernels + fractionMap
 				
 				#Saving results
-				Resultskernels = Resultskernels/i
+				Resultskernels = sumResultskernels/i
 				write.table(Resultskernels,paste(folder,"outputMeanResults.dat",sep=""),row.names=F,col.names=F)
 				
 				#Computing Euclidean 
