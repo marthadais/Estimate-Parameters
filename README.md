@@ -239,7 +239,7 @@ The trained models will be saved in folder 'models'. They permit to execute just
 
 ### Citing this Estimate Parameters code 
 
-Please cite this article in your publications if it helps your research:
+Please cite this article in your publications if this code helps your research:
 
     @article{Ferreira2018,
     title = "Designing architectures of convolutional neural networks to solve practical problems",

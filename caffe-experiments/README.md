@@ -59,22 +59,3 @@ The trained models will be saved in folder 'models'. They permit to execute just
 ### References
 
 [1] Jia, Yangqing, et al. "Caffe: Convolutional architecture for fast feature embedding." _Proceedings of the 22nd ACM international conference on Multimedia_. ACM, 2014.
-
-### Citing this Estimate Parameters code 
-
-Please cite this article in your publications if it helps your research:
-
-    @article{Ferreira2018,
-    title = "Designing architectures of convolutional neural networks to solve practical problems",
-    journal = "Expert Systems with Applications",
-    volume = "94",
-    number = "Supplement C",
-    pages = "205 - 217",
-    year = "2018",
-    issn = "0957-4174",
-    doi = "https://doi.org/10.1016/j.eswa.2017.10.052"
-    author = "Martha Dais Ferreira and Débora Cristina Corrêa and Luis Gustavo Nonato and Rodrigo Fernandes de Mello"}
-
-Or:
-
-[2] Martha Dais Ferreira, Débora Cristina Corrêa, Luis Gustavo Nonato, Rodrigo Fernandes de Mello, "Designing architectures of convolutional neural networks to solve practical problems", _In Expert Systems with Applications_, Volume 94, 2018, Pages 205-217, ISSN 0957-4174, https://doi.org/10.1016/j.eswa.2017.10.052.

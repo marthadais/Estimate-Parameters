@@ -54,6 +54,27 @@ Apply the modified False Nearest Neighbors for all possible codomain obtained fr
 	rt	      = radius for the neighborhood (default = 10)
 	nn	      = number of nearby neighbors to be considered (default = 1)
 	plot.opt      = option to plot the results (default = TRUE) 
+	
+-----------------------------------------------------------------------		
+Citing this Estimate Parameters code 
+
+Please cite this article in your publications if this code helps your research:
+
+    @article{Ferreira2018,
+    title = "Designing architectures of convolutional neural networks to solve practical problems",
+    journal = "Expert Systems with Applications",
+    volume = "94",
+    number = "Supplement C",
+    pages = "205 - 217",
+    year = "2018",
+    issn = "0957-4174",
+    doi = "https://doi.org/10.1016/j.eswa.2017.10.052"
+    author = "Martha Dais Ferreira and Débora Cristina Corrêa and Luis Gustavo Nonato and Rodrigo Fernandes de Mello"}
+
+Or:
+
+    [1] Martha Dais Ferreira, Débora Cristina Corrêa, Luis Gustavo Nonato, Rodrigo Fernandes de Mello, "Designing architectures of convolutional neural networks to solve practical problems", _In Expert Systems with Applications_, Volume 94, 2018, Pages 205-217, ISSN 0957-4174, https://doi.org/10.1016/j.eswa.2017.10.052.
+
 
 
 
